@@ -1,0 +1,4 @@
+node_modules
+server/index.cjs
+cartridges/app_react/cartridge/static
+dw.json

@@ -1,0 +1,17 @@
+{
+  "name": "bulgari-react-in-sfra-poc",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "esbuild ./cartridges/app_react/cartridge/client/react/pages/home.jsx --bundle --minify --outfile=./cartridges/app_react/cartridge/static/default/react/pages/home.js",
+    "build:server": "esbuild ./server/server.jsx --bundle --outfile=server/index.cjs --platform=node",
+    "start": "npm run build:server && node ./server/index.cjs"
+  },
+  "dependencies": {
+    "esbuild": "0.17.14",
+    "express": "^4.18.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.2.0"
+  }
+}

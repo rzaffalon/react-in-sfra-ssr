@@ -1,0 +1,17 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/react/pages/home.js');
+    </isscript>
+
+    <isif condition="${pdict.SSR}">
+        <div id="react-root"><isprint value="${pdict.SSR}" encoding="off" /></div>
+        
+    <iselse/>
+        <div id="react-root"></div>
+    </isif>
+
+    <script id="react-props" type="application/json">
+        { "msg": "Hello React server props", "start": 42 }
+    </script>
+</isdecorate>
