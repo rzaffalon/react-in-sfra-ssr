@@ -11,7 +11,7 @@ export default function Counter({msg = 'Hello react SSR', start = 42}) {
         <div className="container">
             <h1>{msg}! {count}</h1>
 
-            <button onClick={add}>Add 1!</button>
+            <button className="btn btn-primary" onClick={add}>Add 1!</button>
         </div>
     )
 }

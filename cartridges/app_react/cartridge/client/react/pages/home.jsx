@@ -4,5 +4,8 @@ import { hydrateRoot } from 'react-dom/client';
 import Counter from '../components/Counter';
 
 const root = document.getElementById('react-root');
+const propsEl = document.getElementById('react-props');
 
-hydrateRoot(root, <Counter />);
+const props = propsEl ? JSON.parse(propsEl.textContent) : {};
+
+hydrateRoot(root, <Counter {...props} />);

@@ -4,8 +4,6 @@
         assets.addJs('/react/pages/home.js');
     </isscript>
 
-    <h1>${pdict.SSR}</h1>
-
     <isif condition="${pdict.SSR}">
         <div id="react-root"><isprint value="${pdict.SSR}" encoding="off" /></div>
 
