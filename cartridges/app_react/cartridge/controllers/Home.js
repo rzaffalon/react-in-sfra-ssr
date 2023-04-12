@@ -5,16 +5,17 @@ server.extend(base);
 
 server.append('Show', function(req, res, next) {
     const service = require('*/cartridge/scripts/react/hello');
-    let payload = 'failed';
 
-    let response = service.hello();
+    let html = 'failed';
+    let props = {foo: 'bar'};
+
+    let response = service.hello(props);
 
     if (response.isOk()) {
-        payload = response.getObject().text;
-
+        html = response.getObject().text;
     }
     
-    res.setViewData({SSR: payload});
+    res.setViewData({SSR: html, props: props});
 
     next();
 });

@@ -7,7 +7,7 @@ import Counter from "../cartridges/app_react/cartridge/client/react/components/C
 const PORT = process.env.PORT || 3439;
 const app = express();
 
-app.get("/fragment", (req, res) => {
+app.post("/fragment", (req, res) => {
   res.send(ReactDOMServer.renderToString(<Counter />));
 });
 

@@ -4,14 +4,15 @@
         assets.addJs('/react/pages/home.js');
     </isscript>
 
+    <h1>${pdict.SSR}</h1>
+
     <isif condition="${pdict.SSR}">
         <div id="react-root"><isprint value="${pdict.SSR}" encoding="off" /></div>
-        
+
+        <script id="react-props" type="application/json">
+            <isprint value="${JSON.stringify(pdict.props)}" encoding="off" />
+        </script>
     <iselse/>
         <div id="react-root"></div>
     </isif>
-
-    <script id="react-props" type="application/json">
-        { "msg": "Hello React server props", "start": 42 }
-    </script>
 </isdecorate>

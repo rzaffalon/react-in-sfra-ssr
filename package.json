@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "esbuild ./cartridges/app_react/cartridge/client/react/pages/home.jsx --bundle --minify --outfile=./cartridges/app_react/cartridge/static/default/react/pages/home.js",
-    "build:server": "esbuild ./server/server.jsx --bundle --outfile=server/index.cjs --platform=node",
+    "build:server": "esbuild ./server/server.jsx --bundle --minify --outfile=server/index.cjs --platform=node",
     "start": "npm run build:server && node ./server/index.cjs"
   },
   "dependencies": {
