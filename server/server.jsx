@@ -7,8 +7,12 @@ import Counter from "../cartridges/app_react/cartridge/client/react/components/C
 const PORT = process.env.PORT || 3439;
 const app = express();
 
+app.use(express.json());
+
 app.post("/fragment", (req, res) => {
-  res.send(ReactDOMServer.renderToString(<Counter />));
+  const props = req.body.props;
+
+  res.send(ReactDOMServer.renderToString(<Counter {...props} />));
 });
 
 app.listen(PORT, () => {

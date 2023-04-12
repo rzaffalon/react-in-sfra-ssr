@@ -8,10 +8,10 @@ module.exports = {
                     return args;
                 }
 
-                svc.setRequestMethod('GET');
+                svc.setRequestMethod('POST');
             },
             setBody: function setBody() {
-                return payload;
+                return { props: payload };
             },
             parseResponse: function parseResponse(svc, client) {
                 return client;

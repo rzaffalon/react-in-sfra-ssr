@@ -7,7 +7,7 @@ server.append('Show', function(req, res, next) {
     const service = require('*/cartridge/scripts/react/hello');
 
     let html = 'failed';
-    let props = {foo: 'bar'};
+    let props = {msg: 'HELLO FROM SFRA!'};
 
     let response = service.hello(props);
 
